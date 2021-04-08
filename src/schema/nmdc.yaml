@@ -28,6 +28,7 @@ prefixes:
   OBI: http://purl.obolibrary.org/obo/OBI_
   NCIT: http://purl.obolibrary.org/obo/NCIT_
   igsn: https://app.geosamples.org/sample/igsn/
+  terminus: http://terminusdb.com/schema/system#
   
 default_prefix: nmdc
 default_range: string
@@ -461,6 +462,8 @@ classes:
     exact_mappings:
       - OBI:0000747
       - NCIT:C43412
+    broad_mappings:
+      - terminus:Document
         
   study:
     is_a: named thing
@@ -481,7 +484,9 @@ classes:
     todos:
       - determine how to get data values for submitted_to_insdc, investigation_type, experimental_factor
       - project_name is redundant with name, so excluding it      
-          
+    broad_mappings:
+      - terminus:Document
+      
   biosample processing:
     aliases:
       - material processing
